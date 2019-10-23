@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="col">
+
+
+
+        <div *ngIf="movie?.title" ><strong>Title:</strong> {{movie?.title}}  </div>
+        <div *ngIf="movie?.year"> <strong>Year of Production:</strong> {{movie?.year}}</div>
+        <div *ngIf="movie?.mpa_rating"> <strong>Rated:</strong>{{movie?.mpa_rating}} </div>
+
+        <div *ngIf="movie?.runtime"> <strong>Runtime:</strong> {{movie?.runtime}} </div>
+        <div *ngIf="movie?.genres"> <strong>Genres:</strong> {{movie?.genres}} </div>
+        <div *ngIf="movie?.director"> <strong>Director: </strong>{{movie?.director}}</div>
+        <div *ngIf="movie?.writer"> <strong>Writer:</strong> {{movie?.writer}}</div>
+        <div *ngIf="movie?.actors"> <strong>Actors:</strong> {{movie?.actors}}</div>
+        <div *ngIf="movie?.plot"> <strong>Plot:</strong> {{movie?.plot}}</div>
+        <div *ngIf="movie?.language"> <strong>Language:</strong> {{movie?.language}}</div>
+        <div *ngIf="movie?.country"><strong>Country:</strong> {{movie?.country}}</div>
+        <div *ngIf="movie?.awards"><strong>Awards:</strong> {{movie?.awards}} </div>
+
+        <div class="col">
+
+            <figure class="">
+              <img class="img-thumbnail " [src]="movie?.large_cover_image" style="max-height:400px"/>
+              <figcaption *ngIf="movie?.summary"><strong>Summary:</strong> {{movie?.summary}}</figcaption>
+            </figure>
+          </div>
+
+
+
+
+    </div>
+
+</div>
